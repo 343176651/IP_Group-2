@@ -36,7 +36,7 @@ def main():
     en_units = []
     en_attr = []
     for i in range(3):
-        type = int(input('Please choose profession for your unit("0" for Tanker,"1" for Warrior): '))
+        type = int(input('Please choose a profession for your unit("0" for Tanker,"1" for Warrior): '))
         name = input('Please name your unit:')
         attr.append((name, type))
         units.append(UnitCreate(attr[i][0], attr[i][1]))
