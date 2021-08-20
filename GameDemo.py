@@ -1,5 +1,7 @@
 import random
 import re
+units = []
+en_units = []
 
 
 class UnitCreated:
@@ -47,11 +49,10 @@ class CheckUid:
 
 
 def main():
-    print("===Create your unit===")
-    units = []
     attr = []
-    en_units = []
     en_attr = []
+    print("===Create your unit===")
+    global units
     for i in range(3):  # create 3 units
 
         user_input = input('Please choose a profession for your unit("0" for Tanker,"1" for Warrior): ')
@@ -73,7 +74,7 @@ def main():
     for i in range(len(units)):
         UnitCreated.print_attr(units[i])
     input("===Press ENTER to continue===")
-
+    global en_units
     for i in range(3):
         en_type = random.randint(0, 1)
         en_name = "AI" + str(random.randint(10, 99))
@@ -85,7 +86,6 @@ def main():
         UnitCreated.print_attr(en_units[i])
 
     uid_chosen = input("please choose your unit by enter his/her id :")
-
 
 
 if __name__ == "__main__":
