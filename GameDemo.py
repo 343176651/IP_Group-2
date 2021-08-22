@@ -77,13 +77,13 @@ def main():
 
     CheckUid.check(uid_chosen)  # check input
 
-    UnitCreated.print_attr(units[int(uid_chosen - 1)])  # index of list = id - 1
+    UnitCreated.print_attr(units[int(uid_chosen) - 1])  # index of list = id - 1
 
     eid_chosen = input("please choose enemy unit you want to attack by enter his/her id :")
 
     CheckUid.check(eid_chosen)
 
-    UnitCreated.print_attr(units[int(eid_chosen - 1)])
+    UnitCreated.print_attr(units[int(eid_chosen) - 1])
 
 
 if __name__ == "__main__":
