@@ -1,6 +1,6 @@
 import random
 import re
-import UnitCreated
+from UnitCreated import UnitCreated
 
 units = []
 en_units = []
