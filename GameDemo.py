@@ -19,6 +19,40 @@ class CheckUid:
             cls.uid = random.randint(1, 3)
             return print("Invalid ID, random ID({}) is selected".format(cls.uid))
 
+class Attack:
+    def __init__(self, uindex, eindex):
+        global units
+        global en_units
+
+        # unit's attribute
+        self.unit_health = units[uindex].get_health()
+        self.unit_atk = units[uindex].get_atk()
+        self.unit_def = units[uindex].get_def()
+
+        # enemy attribute
+        self.eunit_health = en_units[eindex].get_health()
+        self.eunit_atk = en_units[eindex].get_atk()
+        self.eunit_def = en_units[eindex].get_def()
+
+        # damage unit dealed
+        self.udamage = self.unit_atk - self.eunit_def
+        if self.udamage <= 0:
+            self.udamage = 1
+
+        # set enemy health
+        en_units[eindex].set_health(self.eunit_health - self.udamage)
+
+        # damage enemy dealed
+        self.edamage = self.eunit_atk - self.unit_def
+        if self.edamage <= 0:
+            self.edamage = 1
+
+        # set unit health
+        units[uindex].set_health(self.unit_health - self.edamage)
+
+
+
+
 
 def main():
     attr = []
@@ -77,13 +111,24 @@ def main():
 
     CheckUid.check(uid_chosen)  # check input
 
-    UnitCreated.print_attr(units[int(uid_chosen) - 1])  # index of list = id - 1
+    uindex = CheckUid.uid - 1
+
+    UnitCreated.print_attr(units[uindex])  # index of list = id - 1
 
     eid_chosen = input("please choose enemy unit you want to attack by enter his/her id :")
 
     CheckUid.check(eid_chosen)
 
-    UnitCreated.print_attr(units[int(eid_chosen) - 1])
+    eindex = CheckUid.uid - 1
+
+    UnitCreated.print_attr(en_units[int(eindex)])
+
+    Attack(uindex,eindex)
+
+    print("===Attack finished===")
+
+    UnitCreated.print_attr(units[uindex])
+    UnitCreated.print_attr(en_units(eindex))
 
 
 if __name__ == "__main__":
