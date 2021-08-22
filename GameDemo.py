@@ -128,7 +128,7 @@ def main():
     print("===Attack finished===")
 
     UnitCreated.print_attr(units[uindex])
-    UnitCreated.print_attr(en_units(eindex))
+    UnitCreated.print_attr(en_units[eindex])
 
 
 if __name__ == "__main__":
