@@ -54,6 +54,10 @@ class Attack:
         # set enemy health
         en_units[eindex].set_health(self.eunit_health - self.udamage)
 
+        # when health below 0 set to 0
+        if en_units[eindex].get_health() < 0:
+            en_units[eindex].set_health(0)
+
         # unit get exp
         units[uindex].set_exp(units[uindex].get_exp() + self.udamage)
 
@@ -65,17 +69,20 @@ class Attack:
         # set unit health
         units[uindex].set_health(self.unit_health - self.edamage)
 
+        # when health below 0 set to 0
+        if units[uindex].get_health() < 0:
+            units[uindex].set_health(0)
+
         # target get exp
         en_units[eindex].set_exp(en_units[eindex].get_exp() + self.edamage)
 
 
-class AIAttack:
-    def __init__(self):
-        eid = random.randint(0,2)
-        uid = random.randint(0,2)
-        while True:
-         if UnitCreated.state_check(units[eid]) == 1 and UnitCreated.state_check(en_units[uid]) == 1:
-            Attack(eid, uid)
+def aiAttack():
+    while True:
+        eid = random.randint(0, 2)
+        uid = random.randint(0, 2)
+        if UnitCreated.state_check(units[uid]) == 1 and UnitCreated.state_check(en_units[eid]) == 1:
+            Attack(uid, eid)
             UnitCreated.upgrade(units[uid])  # upgrade if possible
             UnitCreated.upgrade(en_units[eid])
 
@@ -83,8 +90,25 @@ class AIAttack:
             UnitCreated.print_attr(units[uid])  # print state after attack
             break
         else:
-            eid = random.randint(0,2)
-            uid = random.randint(0,2)
+            break
+
+
+def checkField():
+    ustate = 0
+    estate = 0
+    for i in range(len(units)):
+        if UnitCreated.state_check(units[i]) == 1:
+            ustate = ustate + 1
+    if ustate == 0:
+        print("Game Over! You lost!")
+        return 0
+    else:
+        for i in range(len(en_units)):
+            if UnitCreated.state_check(en_units[i]) == 1:
+                estate = estate + 1
+        if estate == 0:
+            print("Congratulation! You Won!")
+            return 1
 
 
 def main():
@@ -124,7 +148,6 @@ def main():
 
     input("===Press ENTER to continue===")
 
-
     # create enemy team
     for i in range(3):
         en_type = random.randint(0, 1)
@@ -139,15 +162,16 @@ def main():
     for i in range(len(en_units)):
         UnitCreated.print_attr(en_units[i])
 
+    # Loop start
     input("===Press ENTER to continue===")
 
     uid_chosen = input("please choose your unit by enter his/her id :")
 
     CheckUid.checknum(uid_chosen)  # check input
 
-    uindex = CheckUid.uid - 1
+    uindex = CheckUid.uid - 1  # index of list = id - 1
 
-    UnitCreated.print_attr(units[uindex])  # index of list = id - 1
+    UnitCreated.print_attr(units[uindex])
 
     eid_chosen = input("please choose enemy unit you want to attack by enter his/her id :")
 
@@ -175,11 +199,8 @@ def main():
     print("===Attacking...===")
     time.sleep(2)  # simulate attacking
 
-    en_uindex = random.randint(0, 2)
-    en_eindex = random.randint(0, 2)
-
     # only attack when both alive
-    AIAttack()
+    aiAttack()
     print("===Attack finished===")
     time.sleep(1)
     # inf_att = input("Do you want to attack same target until a kill ?(y/n)")
@@ -201,6 +222,21 @@ def main():
     print("===enemy team===")
 
     # print enemy team
+    for i in range(len(en_units)):
+        UnitCreated.print_attr(en_units[i])
+
+    while checkField() is None:
+        print("===Attacking...===")
+        aiAttack()
+        print("===Attack Finished!===")
+
+    # print player's whole team
+    print("===player's team===")
+    for i in range(len(units)):
+        UnitCreated.print_attr(units[i])
+
+        # print enemy team
+    print("===enemy team===")
     for i in range(len(en_units)):
         UnitCreated.print_attr(en_units[i])
 
