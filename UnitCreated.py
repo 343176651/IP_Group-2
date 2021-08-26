@@ -86,10 +86,32 @@ class UnitCreated:
             self.__profession = "Warrior"
 
     def print_attr(self):
-        print("[ID:{}, NAME:{}, profession:{}, HP:{}, EXP:{}, RANK:{}, ATK:{}, DEF:{}]"
-              .format(self.__id, self.__name, self.__profession, self.__health, self.__experience,
-                      self.__rank, self.__attack, self.__defence))
+        if self.__health > 0:
+            print("[ID:{}, NAME:{}, profession:{}, HP:{}, EXP:{}, RANK:{}, ATK:{}, DEF:{}]"
+                  .format(self.__id, self.__name, self.__profession, self.__health,
+                          self.__experience, self.__rank, self.__attack, self.__defence))
+        else:
+            print("[Dead][ID:{}, NAME:{}, profession:{}, HP:{}, EXP:{}, RANK:{}, ATK:{}, DEF:{}]"
+                  .format(self.__id, self.__name, self.__profession, self.__health,
+                          self.__experience, self.__rank, self.__attack, self.__defence))
 
     def state_check(self):
         if self.__health > 0:
-            pass  # not finished
+            return 1
+        else:
+            return 0
+
+    def upgrade(self):
+        if self.__experience >= 100:
+            print("'{}' is upgrated !".format(self.__name))
+            self.__experience = self.__experience - 100
+            self.__rank = self.__rank + 1
+            if self.__type == 1:
+                self.__health = self.__health + random.randint(10, 30)
+                self.__attack = self.__attack + random.randint(3, 6)
+                self.__defence = self.__defence + random.randint(1, 3)
+
+            else:
+                self.__health = self.__health + random.randint(30, 50)
+                self.__attack = self.__attack + random.randint(1, 3)
+                self.__defence = self.__defence + random.randint(3, 6)
