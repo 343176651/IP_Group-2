@@ -161,84 +161,89 @@ def main():
     # print enemy team
     for i in range(len(en_units)):
         UnitCreated.print_attr(en_units[i])
-
-    # Loop start
     input("===Press ENTER to continue===")
-
-    uid_chosen = input("please choose your unit by enter his/her id :")
-
-    CheckUid.checknum(uid_chosen)  # check input
-
-    uindex = CheckUid.uid - 1  # index of list = id - 1
-
-    UnitCreated.print_attr(units[uindex])
-
-    eid_chosen = input("please choose enemy unit you want to attack by enter his/her id :")
-
-    CheckUid.checknum(eid_chosen)  # check input
-
-    eindex = CheckUid.uid - 1
-
-    UnitCreated.print_attr(en_units[eindex])
-
-    Attack(uindex, eindex)
-
-    print("===Attacking...===")
-    time.sleep(1)  # simulate attacking
-
-    UnitCreated.upgrade(units[uindex])  # upgrate if possible
-    UnitCreated.upgrade(en_units[eindex])
-
-    UnitCreated.print_attr(units[uindex])
-    UnitCreated.print_attr(en_units[eindex])  # Print unit's state after attack
-
-    print("===Attack finished===")
-
-    print("===AI's turn===")
-    time.sleep(1)
-    print("===Attacking...===")
-    time.sleep(2)  # simulate attacking
-
-    # only attack when both alive
-    aiAttack()
-    print("===Attack finished===")
-    time.sleep(1)
-    # inf_att = input("Do you want to attack same target until a kill ?(y/n)")
-
-    # result = CheckUid.checkstr(inf_att)  # Check input
-
-    # if result == "n":
-    #    pass
-    # else:
-    #    while en_units[eindex].get_health() > 0 and units[uindex].get_health() > 0:
-    #        Attack(uindex, eindex)
-
-    print("===player's team===")
-
-    # print player's whole team
-    for i in range(len(units)):
-        UnitCreated.print_attr(units[i])
-    time.sleep(1)
-    print("===enemy team===")
-
-    # print enemy team
-    for i in range(len(en_units)):
-        UnitCreated.print_attr(en_units[i])
-
+    # Loop start
     while checkField() is None:
-        print("===Attacking...===")
-        aiAttack()
-        print("===Attack Finished!===")
 
-    # print player's whole team
-    print("===player's team===")
-    for i in range(len(units)):
-        UnitCreated.print_attr(units[i])
+        uid_chosen = input("please choose your unit by enter his/her id :")
+
+        CheckUid.checknum(uid_chosen)  # check input
+
+        uindex = CheckUid.uid - 1  # index of list = id - 1
+
+        UnitCreated.print_attr(units[uindex])
+
+        eid_chosen = input("please choose enemy unit you want to attack by enter his/her id :")
+
+        CheckUid.checknum(eid_chosen)  # check input
+
+        eindex = CheckUid.uid - 1
+
+        UnitCreated.print_attr(en_units[eindex])
+
+        Attack(uindex, eindex)
+
+        print("===Attacking...===")
+        time.sleep(1)  # simulate attacking
+
+        UnitCreated.upgrade(units[uindex])  # upgrate if possible
+        UnitCreated.upgrade(en_units[eindex])
+
+        UnitCreated.print_attr(units[uindex])
+        UnitCreated.print_attr(en_units[eindex])  # Print unit's state after attack
+
+        print("===Attack finished===")
+        time.sleep(2)
+        print("===AI's turn===")
+        time.sleep(1)
+        print("===Attacking...===")
+        time.sleep(2)  # simulate attacking
+
+        # only attack when both alive
+        aiAttack()
+        print("===Attack finished===")
+        time.sleep(1)
+
+        print("===player's team===")
+
+        # print player's whole team
+        for i in range(len(units)):
+            UnitCreated.print_attr(units[i])
+        time.sleep(1)
+        print("===enemy team===")
 
         # print enemy team
-    print("===enemy team===")
-    for i in range(len(en_units)):
-        UnitCreated.print_attr(en_units[i])
+        for i in range(len(en_units)):
+            UnitCreated.print_attr(en_units[i])
+
+        if checkField() is not None:
+            # print player's whole team
+            print("===player's team===")
+            for i in range(len(units)):
+                UnitCreated.print_attr(units[i])
+
+            # print enemy team
+            print("===enemy team===")
+            for i in range(len(en_units)):
+                UnitCreated.print_attr(en_units[i])
+            break
+
+        auto = input("Do you want to turn on the auto attack? (y/n)")
+        if auto == "y":
+            while checkField() is None:
+                print("===Attacking...===")
+                aiAttack()
+                print("===Attack Finished!===")
+
+            # print player's whole team
+            print("===player's team===")
+            for i in range(len(units)):
+                UnitCreated.print_attr(units[i])
+
+            # print enemy team
+            print("===enemy team===")
+            for i in range(len(en_units)):
+                UnitCreated.print_attr(en_units[i])
 
 
 if __name__ == "__main__":
