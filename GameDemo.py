@@ -20,15 +20,15 @@ class CheckUid:
             cls.uid = random.randint(1, 3)
             return print("Invalid ID, random ID({}) is selected".format(cls.uid))
 
-    @classmethod
-    def checkstr(cls, str):
-        pattern2 = re.compile('^([y/n])$')
-        if pattern2.search(str) is not None:
-            return str
-        else:
-            print("Input Error!")
-            inf_att = input("Do you want to attack the same target until a kill ?(y/n)")
-            return inf_att
+    # @classmethod
+    # def checkstr(cls, str):
+    #     pattern2 = re.compile('^([y/n])$')
+    #     if pattern2.search(str) is not None:
+    #         return str
+    #     else:
+    #         print("Input Error!")
+    #         inf_att = input("Do you want to attack the same target until a kill ?(y/n)")
+    #         return inf_att
 
 
 class Attack:
