@@ -35,7 +35,8 @@ class Attack:
     def __init__(self, uindex, eindex):
         global units
         global en_units
-
+        time.sleep(1)
+        print("===Attacking...===")
         # unit's attribute
         self.unit_health = units[uindex].get_health()
         self.unit_atk = units[uindex].get_atk()
@@ -76,18 +77,22 @@ class Attack:
         # target get exp
         en_units[eindex].set_exp(en_units[eindex].get_exp() + self.edamage)
 
+        # print attr after attack
+        time.sleep(1)
+        UnitCreated.print_attr(units[uindex])
+        UnitCreated.print_attr(en_units[eindex])
+        print("===Attack finished===\n")
+
 
 def aiAttack():
     while True:
         eid = random.randint(0, 2)
         uid = random.randint(0, 2)
+        # only attack when both alive
         if UnitCreated.state_check(units[uid]) == 1 and UnitCreated.state_check(en_units[eid]) == 1:
             Attack(uid, eid)
             UnitCreated.upgrade(units[uid])  # upgrade if possible
             UnitCreated.upgrade(en_units[eid])
-
-            UnitCreated.print_attr(en_units[eid])
-            UnitCreated.print_attr(units[uid])  # print state after attack
             break
         else:
             break
@@ -114,6 +119,7 @@ def checkField():
 def main():
     attr = []
     en_attr = []
+    will = 1
     print("===Create your unit===")
     global units
     global en_units
@@ -121,7 +127,7 @@ def main():
     # create player's units
     for i in range(3):
 
-        user_input = input('Please choose a profession for your unit("0" for Tanker,"1" for Warrior): ')
+        user_input = input('\nPlease choose a profession for your unit("0" for Tanker,"1" for Warrior): ')
 
         if user_input == "1" or user_input == "0":
             type = int(user_input)
@@ -140,7 +146,7 @@ def main():
         # show unit's attribute
         UnitCreated.print_attr(units[i])
 
-    print("===player's team===")
+    print("\n===player's team===")
 
     # print player's whole team
     for i in range(len(units)):
@@ -156,7 +162,7 @@ def main():
         en_attr.append((en_name, en_type, en_id))
         en_units.append(UnitCreated(en_attr[i][0], en_attr[i][1], attr[i][2]))
 
-    print("===enemy team===")
+    print("\n===enemy team===")
 
     # print enemy team
     for i in range(len(en_units)):
@@ -165,7 +171,7 @@ def main():
     # Loop start
     while checkField() is None:
 
-        uid_chosen = input("please choose your unit by enter his/her id :")
+        uid_chosen = input("\nplease choose your unit by enter his/her id :")
 
         CheckUid.checknum(uid_chosen)  # check input
 
@@ -173,77 +179,73 @@ def main():
 
         UnitCreated.print_attr(units[uindex])
 
-        eid_chosen = input("please choose enemy unit you want to attack by enter his/her id :")
+        eid_chosen = input("\nplease choose enemy unit you want to attack by enter his/her id :")
 
         CheckUid.checknum(eid_chosen)  # check input
 
         eindex = CheckUid.uid - 1
 
         UnitCreated.print_attr(en_units[eindex])
-
+        print("\n")
         Attack(uindex, eindex)
-
-        print("===Attacking...===")
         time.sleep(1)  # simulate attacking
 
         UnitCreated.upgrade(units[uindex])  # upgrate if possible
         UnitCreated.upgrade(en_units[eindex])
 
-        UnitCreated.print_attr(units[uindex])
-        UnitCreated.print_attr(en_units[eindex])  # Print unit's state after attack
+        ###
+        # UnitCreated.print_attr(units[uindex])
+        # UnitCreated.print_attr(en_units[eindex])  # Print unit's state after attack
+        ###
 
-        print("===Attack finished===")
         time.sleep(2)
         print("===AI's turn===")
         time.sleep(1)
-        print("===Attacking...===")
-        time.sleep(2)  # simulate attacking
 
-        # only attack when both alive
+
         aiAttack()
-        print("===Attack finished===")
         time.sleep(1)
 
-        print("===player's team===")
+        print("\n===player's team===")
 
         # print player's whole team
         for i in range(len(units)):
             UnitCreated.print_attr(units[i])
         time.sleep(1)
-        print("===enemy team===")
+        print("\n===enemy team===")
 
         # print enemy team
         for i in range(len(en_units)):
             UnitCreated.print_attr(en_units[i])
 
-        if checkField() is not None:
+        if checkField() is not None:  # when one of the teams all dead
             # print player's whole team
-            print("===player's team===")
+            print("\n===player's team===")
             for i in range(len(units)):
                 UnitCreated.print_attr(units[i])
 
             # print enemy team
-            print("===enemy team===")
+            print("\n===enemy team===")
             for i in range(len(en_units)):
                 UnitCreated.print_attr(en_units[i])
             break
 
-        auto = input("Do you want to turn on the auto attack? (y/n)")
+        if will == 1:
+            auto = input("\nDo you want to turn on the auto attack? (y/n)")
         if auto == "y":
-            while checkField() is None:
-                print("===Attacking...===")
+            while checkField() is None:  # when both team have units alive
                 aiAttack()
-                print("===Attack Finished!===")
-
             # print player's whole team
-            print("===player's team===")
+            print("\n===player's team===")
             for i in range(len(units)):
                 UnitCreated.print_attr(units[i])
 
             # print enemy team
-            print("===enemy team===")
+            print("\n===enemy team===")
             for i in range(len(en_units)):
                 UnitCreated.print_attr(en_units[i])
+        else:
+            will = 0
 
 
 if __name__ == "__main__":
