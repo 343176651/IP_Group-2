@@ -12,7 +12,7 @@ en_units = []
 class Logger(object):
     def __init__(self, filename='eventLog.log', stream=sys.stdout):
         self.terminal = stream
-        self.log = open(filename, 'a')
+        self.log = open(filename, 'w+')
 
     def write(self, message):
         self.terminal.write(message)
