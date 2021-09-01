@@ -69,7 +69,7 @@ class Attack:
             en_units[eindex].set_health(0)
 
         # unit get exp
-        units[uindex].set_exp(units[uindex].get_exp() + self.udamage)
+        units[uindex].set_exp(units[uindex].get_exp() + self.udamage * 2)
 
         # damage enemy dealed
         self.edamage = self.eunit_atk - self.unit_def + random.randint(0, 5)
@@ -84,7 +84,7 @@ class Attack:
             units[uindex].set_health(0)
 
         # target get exp
-        en_units[eindex].set_exp(en_units[eindex].get_exp() + self.edamage)
+        en_units[eindex].set_exp(en_units[eindex].get_exp() + self.edamage * 2)
 
         UnitCreated.upgrade(units[uindex])  # upgrade if possible
         UnitCreated.upgrade(en_units[eindex])
@@ -92,7 +92,10 @@ class Attack:
         time.sleep(0.5)
         UnitCreated.print_attr(units[uindex])
         UnitCreated.print_attr(en_units[eindex])
-
+        print("{} dealt {} damage to {}"
+              .format(units[uindex].get_name(),self.udamage,en_units[eindex].get_name()))
+        print("{} dealt {} damage to {}"
+              .format(en_units[eindex].get_name(),self.edamage,units[uindex].get_name()))
         print(datetime.now().strftime("%m-%d %H:%M:%S"), "===Attack finished===\n")
 
 
@@ -128,7 +131,6 @@ def checkField():
 
 def main():
     print(datetime.now().strftime("%m-%d %H:%M:%S"), "======================Game started======================")
-
     attr = []
     en_attr = []
     will = 1
@@ -213,13 +215,13 @@ def main():
             time.sleep(1)
             aiAttack()
             time.sleep(1)
-            print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "\n===player's team===")
+            print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "===player's team===")
 
             # print player's team
             for i in range(len(units)):
                 UnitCreated.print_attr(units[i])
             time.sleep(1)
-            print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "\n===enemy team===")
+            print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "===enemy team===")
 
             # print enemy team
             for i in range(len(en_units)):
@@ -227,12 +229,12 @@ def main():
 
         if checkField() is not None:  # when one of the teams is wiped
             # print player's whole team
-            print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "\n===player's team===")
+            print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "===player's team===")
             for i in range(len(units)):
                 UnitCreated.print_attr(units[i])
 
             # print enemy team
-            print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "\n===enemy team===")
+            print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "===enemy team===")
             for i in range(len(en_units)):
                 UnitCreated.print_attr(en_units[i])
             break
@@ -245,12 +247,12 @@ def main():
                     while checkField() is None:  # when both team have units alive
                         aiAttack()
                     # print player's whole team
-                    print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "\n===player's team===")
+                    print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "===player's team===")
                     for i in range(len(units)):
                         UnitCreated.print_attr(units[i])
 
                     # print enemy team
-                    print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "\n===enemy team===")
+                    print('\n', datetime.now().strftime("%m-%d %H:%M:%S"), "===enemy team===")
                     for i in range(len(en_units)):
                         UnitCreated.print_attr(en_units[i])
 

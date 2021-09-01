@@ -1,149 +1,258 @@
-09-01 11:33:08 ======================Game started======================
-09-01 11:33:08 ===Create your unit===
+09-01 14:06:27 ======================Game started======================
+09-01 14:06:27 ===Create your unit===
 
 Please choose a profession for your unit("0" for Tanker,"1" for Warrior):
  Please name your unit:
-[ID:1, NAME:1, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:6, DEF:5]
+[ID:1, NAME:warrior, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:9, DEF:9]
 
 Please choose a profession for your unit("0" for Tanker,"1" for Warrior):
  Please name your unit:
-[ID:2, NAME:1, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:5, DEF:9]
+[ID:2, NAME:tanker, profession:Tanker, HP:50, EXP:0, RANK:1, ATK:5, DEF:12]
 
 Please choose a profession for your unit("0" for Tanker,"1" for Warrior):
- Please name your unit:
-[ID:3, NAME:1, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:20, DEF:5]
-09-01 11:33:13 
+ Invalid input!! Random profession is created.
+ ===press ENTER to continue===Please name your unit:
+[ID:3, NAME:random, profession:Tanker, HP:50, EXP:0, RANK:1, ATK:6, DEF:13]
+09-01 14:06:56 
 ===player's team===
-[ID:1, NAME:1, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:6, DEF:5]
-[ID:2, NAME:1, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:5, DEF:9]
-[ID:3, NAME:1, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:20, DEF:5]
+[ID:1, NAME:warrior, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:9, DEF:9]
+[ID:2, NAME:tanker, profession:Tanker, HP:50, EXP:0, RANK:1, ATK:5, DEF:12]
+[ID:3, NAME:random, profession:Tanker, HP:50, EXP:0, RANK:1, ATK:6, DEF:13]
 ===Press ENTER to continue===
-09-01 11:33:14 
+09-01 14:06:59 
 ===enemy team===
-[ID:1, NAME:AI20, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:10, DEF:10]
-[ID:2, NAME:AI60, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:20, DEF:8]
-[ID:3, NAME:AI17, profession:Tanker, HP:50, EXP:0, RANK:1, ATK:1, DEF:13]
+[ID:1, NAME:AI79, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:6, DEF:6]
+[ID:2, NAME:AI73, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:10, DEF:10]
+[ID:3, NAME:AI15, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:15, DEF:1]
 ===Press ENTER to continue===
 please choose your unit by enter his/her id :
-09-01 11:33:16 ID(1) is selected
-[ID:1, NAME:1, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:6, DEF:5]
+09-01 14:07:33 ID(1) is selected
+[ID:1, NAME:warrior, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:9, DEF:9]
 
 please choose enemy unit you want to attack by enter his/her id :
-09-01 11:33:17 ID(1) is selected
-[ID:1, NAME:AI20, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:10, DEF:10]
+09-01 14:07:36 ID(1) is selected
+[ID:1, NAME:AI79, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:6, DEF:6]
 
 
-09-01 11:33:17 ===Attacking...===
-[ID:1, NAME:1, profession:Warrior, HP:43, EXP:1, RANK:1, ATK:6, DEF:5]
-[ID:1, NAME:AI20, profession:Warrior, HP:49, EXP:7, RANK:1, ATK:10, DEF:10]
-09-01 11:33:18 ===Attack finished===
+09-01 14:07:36 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:45, EXP:8, RANK:1, ATK:9, DEF:9]
+[ID:1, NAME:AI79, profession:Warrior, HP:46, EXP:10, RANK:1, ATK:6, DEF:6]
+warrior dealt 4 damage to AI79
+AI79 dealt 5 damage to warrior
+09-01 14:07:37 ===Attack finished===
 
-09-01 11:33:19 ===AI's turn===
-09-01 11:33:20 ===Attacking...===
-[ID:2, NAME:1, profession:Warrior, HP:47, EXP:3, RANK:1, ATK:5, DEF:9]
-[ID:3, NAME:AI17, profession:Tanker, HP:47, EXP:3, RANK:1, ATK:1, DEF:13]
-09-01 11:33:21 ===Attack finished===
+09-01 14:07:38 ===AI's turn===
+09-01 14:07:39 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:34, EXP:28, RANK:1, ATK:9, DEF:9]
+[ID:3, NAME:AI15, profession:Warrior, HP:40, EXP:22, RANK:1, ATK:15, DEF:1]
+warrior dealt 10 damage to AI15
+AI15 dealt 11 damage to warrior
+09-01 14:07:40 ===Attack finished===
 
 
- 09-01 11:33:22 
-===player's team===
-[ID:1, NAME:1, profession:Warrior, HP:43, EXP:1, RANK:1, ATK:6, DEF:5]
-[ID:2, NAME:1, profession:Warrior, HP:47, EXP:3, RANK:1, ATK:5, DEF:9]
-[ID:3, NAME:1, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:20, DEF:5]
+ 09-01 14:07:41 ===player's team===
+[ID:1, NAME:warrior, profession:Warrior, HP:34, EXP:28, RANK:1, ATK:9, DEF:9]
+[ID:2, NAME:tanker, profession:Tanker, HP:50, EXP:0, RANK:1, ATK:5, DEF:12]
+[ID:3, NAME:random, profession:Tanker, HP:50, EXP:0, RANK:1, ATK:6, DEF:13]
 
- 09-01 11:33:23 
-===enemy team===
-[ID:1, NAME:AI20, profession:Warrior, HP:49, EXP:7, RANK:1, ATK:10, DEF:10]
-[ID:2, NAME:AI60, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:20, DEF:8]
-[ID:3, NAME:AI17, profession:Tanker, HP:47, EXP:3, RANK:1, ATK:1, DEF:13]
+ 09-01 14:07:42 ===enemy team===
+[ID:1, NAME:AI79, profession:Warrior, HP:46, EXP:10, RANK:1, ATK:6, DEF:6]
+[ID:2, NAME:AI73, profession:Warrior, HP:50, EXP:0, RANK:1, ATK:10, DEF:10]
+[ID:3, NAME:AI15, profession:Warrior, HP:40, EXP:22, RANK:1, ATK:15, DEF:1]
 
 Do you want to turn on the auto attack? (y/n)
-09-01 11:33:25 ===Attacking...===
-[ID:3, NAME:1, profession:Warrior, HP:45, EXP:13, RANK:1, ATK:20, DEF:5]
-[ID:1, NAME:AI20, profession:Warrior, HP:36, EXP:12, RANK:1, ATK:10, DEF:10]
-09-01 11:33:26 ===Attack finished===
+09-01 14:09:01 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:23, EXP:52, RANK:1, ATK:9, DEF:9]
+[ID:3, NAME:AI15, profession:Warrior, HP:28, EXP:44, RANK:1, ATK:15, DEF:1]
+warrior dealt 12 damage to AI15
+AI15 dealt 11 damage to warrior
+09-01 14:09:02 ===Attack finished===
 
-09-01 11:33:26 ===Attacking...===
-[ID:1, NAME:1, profession:Warrior, HP:27, EXP:3, RANK:1, ATK:6, DEF:5]
-[ID:2, NAME:AI60, profession:Warrior, HP:48, EXP:16, RANK:1, ATK:20, DEF:8]
-09-01 11:33:27 ===Attack finished===
+09-01 14:09:02 ===Attacking...===
+[ID:3, NAME:random, profession:Tanker, HP:46, EXP:10, RANK:1, ATK:6, DEF:13]
+[ID:1, NAME:AI79, profession:Warrior, HP:41, EXP:18, RANK:1, ATK:6, DEF:6]
+random dealt 5 damage to AI79
+AI79 dealt 4 damage to random
+09-01 14:09:03 ===Attack finished===
 
-09-01 11:33:27 ===Attacking...===
-[ID:3, NAME:1, profession:Warrior, HP:36, EXP:23, RANK:1, ATK:20, DEF:5]
-[ID:1, NAME:AI20, profession:Warrior, HP:26, EXP:21, RANK:1, ATK:10, DEF:10]
-09-01 11:33:28 ===Attack finished===
+09-01 14:09:03 ===Attacking...===
+[ID:3, NAME:random, profession:Tanker, HP:42, EXP:12, RANK:1, ATK:6, DEF:13]
+[ID:2, NAME:AI73, profession:Warrior, HP:49, EXP:8, RANK:1, ATK:10, DEF:10]
+random dealt 1 damage to AI73
+AI73 dealt 4 damage to random
+09-01 14:09:04 ===Attack finished===
 
-09-01 11:33:28 ===Attacking...===
-[ID:2, NAME:1, profession:Warrior, HP:36, EXP:4, RANK:1, ATK:5, DEF:9]
-[ID:2, NAME:AI60, profession:Warrior, HP:47, EXP:27, RANK:1, ATK:20, DEF:8]
-09-01 11:33:29 ===Attack finished===
+09-01 14:09:04 ===Attacking...===
+[ID:2, NAME:tanker, profession:Tanker, HP:47, EXP:12, RANK:1, ATK:5, DEF:12]
+[ID:3, NAME:AI15, profession:Warrior, HP:22, EXP:50, RANK:1, ATK:15, DEF:1]
+tanker dealt 6 damage to AI15
+AI15 dealt 3 damage to tanker
+09-01 14:09:05 ===Attack finished===
 
-09-01 11:33:29 ===Attacking...===
-[ID:1, NAME:1, profession:Warrior, HP:18, EXP:9, RANK:1, ATK:6, DEF:5]
-[ID:1, NAME:AI20, profession:Warrior, HP:20, EXP:30, RANK:1, ATK:10, DEF:10]
-09-01 11:33:30 ===Attack finished===
+09-01 14:09:05 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:20, EXP:56, RANK:1, ATK:9, DEF:9]
+[ID:2, NAME:AI73, profession:Warrior, HP:47, EXP:14, RANK:1, ATK:10, DEF:10]
+warrior dealt 2 damage to AI73
+AI73 dealt 3 damage to warrior
+09-01 14:09:06 ===Attack finished===
 
-09-01 11:33:30 ===Attacking...===
-[ID:1, NAME:1, profession:Warrior, HP:3, EXP:12, RANK:1, ATK:6, DEF:5]
-[ID:2, NAME:AI60, profession:Warrior, HP:44, EXP:42, RANK:1, ATK:20, DEF:8]
-09-01 11:33:31 ===Attack finished===
+09-01 14:09:06 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:18, EXP:70, RANK:1, ATK:9, DEF:9]
+[ID:1, NAME:AI79, profession:Warrior, HP:34, EXP:22, RANK:1, ATK:6, DEF:6]
+warrior dealt 7 damage to AI79
+AI79 dealt 2 damage to warrior
+09-01 14:09:07 ===Attack finished===
 
-09-01 11:33:31 ===Attacking...===
-[ID:2, NAME:1, profession:Warrior, HP:34, EXP:8, RANK:1, ATK:5, DEF:9]
-[ID:1, NAME:AI20, profession:Warrior, HP:16, EXP:32, RANK:1, ATK:10, DEF:10]
-09-01 11:33:32 ===Attack finished===
+09-01 14:09:07 ===Attacking...===
+[ID:2, NAME:tanker, profession:Tanker, HP:44, EXP:24, RANK:1, ATK:5, DEF:12]
+[ID:2, NAME:AI73, profession:Warrior, HP:41, EXP:20, RANK:1, ATK:10, DEF:10]
+tanker dealt 6 damage to AI73
+AI73 dealt 3 damage to tanker
+09-01 14:09:08 ===Attack finished===
 
-09-01 11:33:32 ===Attacking...===
-[Dead][ID:1, NAME:1, profession:Warrior, HP:0, EXP:13, RANK:1, ATK:6, DEF:5]
-[ID:3, NAME:AI17, profession:Tanker, HP:46, EXP:7, RANK:1, ATK:1, DEF:13]
-09-01 11:33:33 ===Attack finished===
+09-01 14:09:08 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:14, EXP:82, RANK:1, ATK:9, DEF:9]
+[ID:2, NAME:AI73, profession:Warrior, HP:35, EXP:28, RANK:1, ATK:10, DEF:10]
+warrior dealt 6 damage to AI73
+AI73 dealt 4 damage to warrior
+09-01 14:09:09 ===Attack finished===
 
-09-01 11:33:33 ===Attacking...===
-[ID:2, NAME:1, profession:Warrior, HP:28, EXP:13, RANK:1, ATK:5, DEF:9]
-[ID:1, NAME:AI20, profession:Warrior, HP:11, EXP:38, RANK:1, ATK:10, DEF:10]
-09-01 11:33:34 ===Attack finished===
+09-01 14:09:09 ===Attacking...===
+[ID:2, NAME:tanker, profession:Tanker, HP:40, EXP:42, RANK:1, ATK:5, DEF:12]
+[ID:3, NAME:AI15, profession:Warrior, HP:13, EXP:58, RANK:1, ATK:15, DEF:1]
+tanker dealt 9 damage to AI15
+AI15 dealt 4 damage to tanker
+09-01 14:09:10 ===Attack finished===
 
-09-01 11:33:34 ===Attacking...===
-[ID:3, NAME:1, profession:Warrior, HP:21, EXP:38, RANK:1, ATK:20, DEF:5]
-[ID:2, NAME:AI60, profession:Warrior, HP:29, EXP:57, RANK:1, ATK:20, DEF:8]
-09-01 11:33:35 ===Attack finished===
+09-01 14:09:10 ===Attacking...===
+[ID:2, NAME:tanker, profession:Tanker, HP:39, EXP:48, RANK:1, ATK:5, DEF:12]
+[ID:2, NAME:AI73, profession:Warrior, HP:32, EXP:30, RANK:1, ATK:10, DEF:10]
+tanker dealt 3 damage to AI73
+AI73 dealt 1 damage to tanker
+09-01 14:09:11 ===Attack finished===
 
-09-01 11:33:35 ===Attacking...===
-[ID:2, NAME:1, profession:Warrior, HP:14, EXP:16, RANK:1, ATK:5, DEF:9]
-[ID:2, NAME:AI60, profession:Warrior, HP:26, EXP:71, RANK:1, ATK:20, DEF:8]
-09-01 11:33:36 ===Attack finished===
+09-01 14:09:11 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:12, EXP:86, RANK:1, ATK:9, DEF:9]
+[ID:2, NAME:AI73, profession:Warrior, HP:30, EXP:34, RANK:1, ATK:10, DEF:10]
+warrior dealt 2 damage to AI73
+AI73 dealt 2 damage to warrior
+09-01 14:09:12 ===Attack finished===
 
-09-01 11:33:36 ===Attacking...===
-[Dead][ID:2, NAME:1, profession:Warrior, HP:0, EXP:20, RANK:1, ATK:5, DEF:9]
-[ID:2, NAME:AI60, profession:Warrior, HP:22, EXP:85, RANK:1, ATK:20, DEF:8]
-09-01 11:33:37 ===Attack finished===
+09-01 14:09:12 ===Attacking...===
+[ID:3, NAME:random, profession:Tanker, HP:36, EXP:30, RANK:1, ATK:6, DEF:13]
+[ID:3, NAME:AI15, profession:Warrior, HP:4, EXP:70, RANK:1, ATK:15, DEF:1]
+random dealt 9 damage to AI15
+AI15 dealt 6 damage to random
+09-01 14:09:13 ===Attack finished===
 
-09-01 11:33:37 ===Attacking...===
-[ID:3, NAME:1, profession:Warrior, HP:13, EXP:48, RANK:1, ATK:20, DEF:5]
-[ID:1, NAME:AI20, profession:Warrior, HP:1, EXP:46, RANK:1, ATK:10, DEF:10]
-09-01 11:33:38 ===Attack finished===
+09-01 14:09:13 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:11, EXP:90, RANK:1, ATK:9, DEF:9]
+[ID:2, NAME:AI73, profession:Warrior, HP:28, EXP:36, RANK:1, ATK:10, DEF:10]
+warrior dealt 2 damage to AI73
+AI73 dealt 1 damage to warrior
+09-01 14:09:14 ===Attack finished===
 
-09-01 11:33:38 ===Attacking...===
-[ID:3, NAME:1, profession:Warrior, HP:3, EXP:58, RANK:1, ATK:20, DEF:5]
-[Dead][ID:1, NAME:AI20, profession:Warrior, HP:0, EXP:56, RANK:1, ATK:10, DEF:10]
-09-01 11:33:39 ===Attack finished===
+09-01 14:09:14 ===Attacking...===
+'warrior' is upgraded !
+[ID:1, NAME:warrior, profession:Warrior, HP:29, EXP:2, RANK:2, ATK:13, DEF:10]
+[ID:1, NAME:AI79, profession:Warrior, HP:28, EXP:24, RANK:1, ATK:6, DEF:6]
+warrior dealt 6 damage to AI79
+AI79 dealt 1 damage to warrior
+09-01 14:09:15 ===Attack finished===
 
-09-01 11:33:39 ===Attacking...===
-[Dead][ID:3, NAME:1, profession:Warrior, HP:0, EXP:68, RANK:1, ATK:20, DEF:5]
-[ID:3, NAME:AI17, profession:Tanker, HP:36, EXP:11, RANK:1, ATK:1, DEF:13]
-09-01 11:33:40 ===Attack finished===
+09-01 14:09:15 ===Attacking...===
+[ID:2, NAME:tanker, profession:Tanker, HP:33, EXP:54, RANK:1, ATK:5, DEF:12]
+[ID:1, NAME:AI79, profession:Warrior, HP:25, EXP:36, RANK:1, ATK:6, DEF:6]
+tanker dealt 3 damage to AI79
+AI79 dealt 6 damage to tanker
+09-01 14:09:16 ===Attack finished===
 
-09-01 11:33:40 Game Over! You lost!
+09-01 14:09:16 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:23, EXP:24, RANK:2, ATK:13, DEF:10]
+[ID:1, NAME:AI79, profession:Warrior, HP:14, EXP:48, RANK:1, ATK:6, DEF:6]
+warrior dealt 11 damage to AI79
+AI79 dealt 6 damage to warrior
+09-01 14:09:17 ===Attack finished===
 
- 09-01 11:33:40 
-===player's team===
-[Dead][ID:1, NAME:1, profession:Warrior, HP:0, EXP:13, RANK:1, ATK:6, DEF:5]
-[Dead][ID:2, NAME:1, profession:Warrior, HP:0, EXP:20, RANK:1, ATK:5, DEF:9]
-[Dead][ID:3, NAME:1, profession:Warrior, HP:0, EXP:68, RANK:1, ATK:20, DEF:5]
+09-01 14:09:17 ===Attacking...===
+[ID:3, NAME:random, profession:Tanker, HP:31, EXP:34, RANK:1, ATK:6, DEF:13]
+[ID:1, NAME:AI79, profession:Warrior, HP:12, EXP:58, RANK:1, ATK:6, DEF:6]
+random dealt 2 damage to AI79
+AI79 dealt 5 damage to random
+09-01 14:09:18 ===Attack finished===
 
- 09-01 11:33:40 
-===enemy team===
-[Dead][ID:1, NAME:AI20, profession:Warrior, HP:0, EXP:56, RANK:1, ATK:10, DEF:10]
-[ID:2, NAME:AI60, profession:Warrior, HP:22, EXP:85, RANK:1, ATK:20, DEF:8]
-[ID:3, NAME:AI17, profession:Tanker, HP:36, EXP:11, RANK:1, ATK:1, DEF:13]
-09-01 11:33:40 Game Over! You lost!
+09-01 14:09:18 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:18, EXP:40, RANK:2, ATK:13, DEF:10]
+[ID:2, NAME:AI73, profession:Warrior, HP:20, EXP:46, RANK:1, ATK:10, DEF:10]
+warrior dealt 8 damage to AI73
+AI73 dealt 5 damage to warrior
+09-01 14:09:19 ===Attack finished===
+
+09-01 14:09:19 ===Attacking...===
+[ID:3, NAME:random, profession:Tanker, HP:27, EXP:44, RANK:1, ATK:6, DEF:13]
+[Dead][ID:3, NAME:AI15, profession:Warrior, HP:0, EXP:78, RANK:1, ATK:15, DEF:1]
+random dealt 5 damage to AI15
+AI15 dealt 4 damage to random
+09-01 14:09:20 ===Attack finished===
+
+09-01 14:09:20 ===Attacking...===
+[ID:2, NAME:tanker, profession:Tanker, HP:30, EXP:64, RANK:1, ATK:5, DEF:12]
+[ID:2, NAME:AI73, profession:Warrior, HP:15, EXP:52, RANK:1, ATK:10, DEF:10]
+tanker dealt 5 damage to AI73
+AI73 dealt 3 damage to tanker
+09-01 14:09:21 ===Attack finished===
+
+09-01 14:09:21 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:14, EXP:52, RANK:2, ATK:13, DEF:10]
+[ID:2, NAME:AI73, profession:Warrior, HP:9, EXP:60, RANK:1, ATK:10, DEF:10]
+warrior dealt 6 damage to AI73
+AI73 dealt 4 damage to warrior
+09-01 14:09:22 ===Attack finished===
+
+09-01 14:09:22 ===Attacking...===
+[ID:3, NAME:random, profession:Tanker, HP:24, EXP:54, RANK:1, ATK:6, DEF:13]
+[ID:1, NAME:AI79, profession:Warrior, HP:7, EXP:64, RANK:1, ATK:6, DEF:6]
+random dealt 5 damage to AI79
+AI79 dealt 3 damage to random
+09-01 14:09:23 ===Attack finished===
+
+09-01 14:09:23 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:9, EXP:62, RANK:2, ATK:13, DEF:10]
+[ID:2, NAME:AI73, profession:Warrior, HP:4, EXP:70, RANK:1, ATK:10, DEF:10]
+warrior dealt 5 damage to AI73
+AI73 dealt 5 damage to warrior
+09-01 14:09:24 ===Attack finished===
+
+09-01 14:09:24 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:6, EXP:70, RANK:2, ATK:13, DEF:10]
+[Dead][ID:2, NAME:AI73, profession:Warrior, HP:0, EXP:76, RANK:1, ATK:10, DEF:10]
+warrior dealt 4 damage to AI73
+AI73 dealt 3 damage to warrior
+09-01 14:09:25 ===Attack finished===
+
+09-01 14:09:25 ===Attacking...===
+[ID:2, NAME:tanker, profession:Tanker, HP:27, EXP:66, RANK:1, ATK:5, DEF:12]
+[ID:1, NAME:AI79, profession:Warrior, HP:6, EXP:70, RANK:1, ATK:6, DEF:6]
+tanker dealt 1 damage to AI79
+AI79 dealt 3 damage to tanker
+09-01 14:09:26 ===Attack finished===
+
+09-01 14:09:26 ===Attacking...===
+[ID:1, NAME:warrior, profession:Warrior, HP:2, EXP:86, RANK:2, ATK:13, DEF:10]
+[Dead][ID:1, NAME:AI79, profession:Warrior, HP:0, EXP:78, RANK:1, ATK:6, DEF:6]
+warrior dealt 8 damage to AI79
+AI79 dealt 4 damage to warrior
+09-01 14:09:27 ===Attack finished===
+
+09-01 14:09:27 Congratulation! You Won!
+
+ 09-01 14:09:27 ===player's team===
+[ID:1, NAME:warrior, profession:Warrior, HP:2, EXP:86, RANK:2, ATK:13, DEF:10]
+[ID:2, NAME:tanker, profession:Tanker, HP:27, EXP:66, RANK:1, ATK:5, DEF:12]
+[ID:3, NAME:random, profession:Tanker, HP:24, EXP:54, RANK:1, ATK:6, DEF:13]
+
+ 09-01 14:09:27 ===enemy team===
+[Dead][ID:1, NAME:AI79, profession:Warrior, HP:0, EXP:78, RANK:1, ATK:6, DEF:6]
+[Dead][ID:2, NAME:AI73, profession:Warrior, HP:0, EXP:76, RANK:1, ATK:10, DEF:10]
+[Dead][ID:3, NAME:AI15, profession:Warrior, HP:0, EXP:78, RANK:1, ATK:15, DEF:1]
+09-01 14:09:27 Congratulation! You Won!
