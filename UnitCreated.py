@@ -73,7 +73,7 @@ class UnitCreated:
         self.__id = id
         self.__name = name
         self.__type = type
-        self.__health = 100
+        self.__health = 50
         self.__experience = 0
         self.__rank = 1
         if self.__type == 0:
