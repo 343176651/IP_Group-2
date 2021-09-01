@@ -22,6 +22,9 @@ class Logger(object):
         pass
 
 
+sys.stdout = Logger(stream=sys.stdout)
+
+
 class CheckUid:
     uid = 0
 
@@ -35,9 +38,6 @@ class CheckUid:
             cls.uid = random.randint(1, 3)
             return print(datetime.now().strftime("%m-%d %H:%M:%S"),
                          "Invalid ID, random ID({}) is selected".format(cls.uid))
-
-
-sys.stdout = Logger(stream=sys.stdout)
 
 
 class Attack:
@@ -93,9 +93,9 @@ class Attack:
         UnitCreated.print_attr(units[uindex])
         UnitCreated.print_attr(en_units[eindex])
         print("{} dealt {} damage to {}"
-              .format(units[uindex].get_name(),self.udamage,en_units[eindex].get_name()))
+              .format(units[uindex].get_name(), self.udamage, en_units[eindex].get_name()))
         print("{} dealt {} damage to {}"
-              .format(en_units[eindex].get_name(),self.edamage,units[uindex].get_name()))
+              .format(en_units[eindex].get_name(), self.edamage, units[uindex].get_name()))
         print(datetime.now().strftime("%m-%d %H:%M:%S"), "===Attack finished===\n")
 
 
@@ -205,7 +205,7 @@ def main():
                 Attack(uindex, eindex)
                 break
             else:
-                print("Invalid attack! You can not attack a dead unit!\n")
+                print("Invalid attack! Please check the states of both unit.\n")
                 pass
 
         time.sleep(1)
