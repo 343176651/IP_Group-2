@@ -103,7 +103,7 @@ class UnitCreated:
 
     def upgrade(self):
         if self.__experience >= 100:
-            print("'{}' is upgrated !".format(self.__name))
+            print("'{}' is upgraded !".format(self.__name))
             self.__experience = self.__experience - 100
             self.__rank = self.__rank + 1
             if self.__type == 1:
