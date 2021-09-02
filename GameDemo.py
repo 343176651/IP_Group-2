@@ -30,12 +30,12 @@ class CheckUid:
 
     @classmethod
     def checknum(cls, id_chosen):
-        pattern = re.compile('^([1-3])$')
+        pattern = re.compile('^([1-{}])$'.format(len(units)))
         if pattern.search(id_chosen) is not None:
             cls.uid = int(id_chosen)
             return print(datetime.now().strftime("%m-%d %H:%M:%S"), "ID({}) is selected".format(cls.uid))
         else:
-            cls.uid = random.randint(1, 3)
+            cls.uid = random.randint(1, len(units))
             return print(datetime.now().strftime("%m-%d %H:%M:%S"),
                          "Invalid ID, random ID({}) is selected".format(cls.uid))
 
@@ -101,8 +101,8 @@ class Attack:
 
 def aiAttack():
     while True:
-        eid = random.randint(0, 2)
-        uid = random.randint(0, 2)
+        eid = random.randint(0, len(en_units)-1)
+        uid = random.randint(0, len(units)-1)
         # only attack when both alive
         if UnitCreated.state_check(units[uid]) == 1 and UnitCreated.state_check(en_units[eid]) == 1:
             Attack(uid, eid)
@@ -134,12 +134,13 @@ def main():
     attr = []
     en_attr = []
     will = 1
+    size = int(input("Please enter your team size:\n"))
     print(datetime.now().strftime("%m-%d %H:%M:%S"), "===Create your unit===")
     global units
     global en_units
 
     # create player's units
-    for i in range(3):
+    for i in range(size):
 
         user_input = input('\nPlease choose a profession for your unit("0" for Tanker,"1" for Warrior):\n ')
 
@@ -168,7 +169,7 @@ def main():
     input("===Press ENTER to continue===\n")
 
     # create enemy team
-    for i in range(3):
+    for i in range(size):
         en_type = random.randint(0, 1)
         en_name = "AI" + str(random.randint(10, 99))
         en_id = i + 1
