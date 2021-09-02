@@ -27,7 +27,6 @@ sys.stdout = Logger(stream=sys.stdout)
 
 class CheckUid:
     uid = 0
-
     @classmethod
     def checknum(cls, id_chosen):
         pattern = re.compile('^([1-{}])$'.format(len(units)))
@@ -134,7 +133,7 @@ def main():
     attr = []
     en_attr = []
     will = 1
-    size = int(input("Please enter your team size:\n"))
+    size = int(input("Please enter your team size(maximum at 9):\n"))
     print(datetime.now().strftime("%m-%d %H:%M:%S"), "===Create your unit===")
     global units
     global en_units
